@@ -19,7 +19,7 @@ class _HomeScreen extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Screen'),
+        title: const Text('AunSabeBien'),
         centerTitle: true,
         //
         actions: [
@@ -35,11 +35,11 @@ class _HomeScreen extends State<HomeScreen> {
         ],
       ),
       drawer: const CustomDrawerWidget(),
-      body: const Center(
-        child: Text(
-          'BIENVENIDO',
-          style: TextStyle(fontSize: 28),
-        ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: FittedBox(
+            fit: BoxFit.cover, child: Image.asset("assets/fondito.jpeg")),
       ),
     );
   }
