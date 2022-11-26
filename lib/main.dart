@@ -13,7 +13,8 @@ void main() async {
 
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
-        create: (_) => ThemeProvider(isDarkMode: Preferences.theme))
+      create: (_) => ThemeProvider(isDarkMode: Preferences.theme),
+    )
   ], child: MyApp())
 
       //MyApp()
