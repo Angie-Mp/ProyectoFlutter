@@ -3,24 +3,19 @@ import 'package:flutter_app/screens/index.dart';
 
 class MyRoutes {
   static const String routeHOME = '/home';
-  static const String routeAJUSTE = '/ajuste';
   static const String routePERFIL = '/perfil';
   static const String routeCART = '/cart';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case ('/home'):
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
-
-      case ('/ajuste'):
-        return MaterialPageRoute(builder: (_) => const ConfigScreen());
-
+        return MaterialPageRoute(builder: (_) => const HomeView());
       case ('/perfil'):
-        return MaterialPageRoute(builder: (_) => const PerfilScreen());
+        return MaterialPageRoute(builder: (_) => const PerfilView());
       case ('/cart'):
-        return MaterialPageRoute(builder: (_) => const MyCartScreen());
+        return MaterialPageRoute(builder: (_) => const MyCartView());
       default:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeView());
     }
   }
 }
