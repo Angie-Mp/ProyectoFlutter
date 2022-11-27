@@ -17,3 +17,5 @@ export 'package:flutter_app/login/provider/loginProvider.dart';
 export 'package:flutter_app/home/perfil.dart';
 //cart
 export 'package:flutter_app/cart/cart_view.dart';
+//stores
+export 'package:flutter_app/store_maps/storeMapsView.dart';

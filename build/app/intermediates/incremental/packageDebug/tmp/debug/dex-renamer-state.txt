@@ -1,4 +1,4 @@
-#Sat Nov 26 15:35:11 PET 2022
-base.0=/Users/mac/Documents/ProyectoFlutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
+#Sun Nov 27 03:15:45 COT 2022
+base.0=D\:\\Proyecto-U2\\ProyectoFlutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
+path.0=classes.dex
