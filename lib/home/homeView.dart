@@ -14,7 +14,7 @@ class _HomeViewState extends State<HomeView> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     ProductsViews(),
-    Text('fff'),
+    StoreMapsView(),
     PerfilView()
   ];
 

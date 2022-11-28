@@ -5,8 +5,8 @@ class PreferencesAccountCreate {
 
   static String _nombre = '';
   static String _email = '';
+  static String _numero = '';
 
-  static int _genero = 1;
   static bool _theme = false;
 
   static Future init() async {
@@ -34,14 +34,14 @@ class PreferencesAccountCreate {
     _prefs.setString('email', email);
   }
 
-  //Genero
-  static int get genero {
-    return _prefs.getInt('genero') ?? _genero;
+  //numero
+  static String get numero {
+    return _prefs.getString('numero') ?? _numero;
   }
 
-  static set genero(int genero) {
-    _genero = genero;
-    _prefs.setInt('genero', genero);
+  static set numero(String numero) {
+    _numero = numero;
+    _prefs.setString('numero', numero);
   }
 
 //Theme

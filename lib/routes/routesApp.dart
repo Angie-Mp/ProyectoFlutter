@@ -14,6 +14,8 @@ export 'package:flutter_app/login/createLogin/customTextField.dart';
 //provider
 export 'package:flutter_app/login/provider/loginProvider.dart';
 //perfil
-export 'package:flutter_app/home/perfil.dart';
+export 'package:flutter_app/home/perfil/perfil.dart';
 //cart
 export 'package:flutter_app/cart/cart_view.dart';
+//stores
+export 'package:flutter_app/store_maps/storeMapsView.dart';

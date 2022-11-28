@@ -7,6 +7,7 @@ class MyRoutes {
   static const String routeCREATEACCOUNT = '/createAccount';
   static const String routeHOME = '/home';
   static const String routeCART = '/cart';
+  static const String routeSTORES = '/stores';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -23,6 +24,8 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const HomeView());
       case ('/cart'):
         return MaterialPageRoute(builder: (_) => const MyCartView());
+      case ('/stores'):
+        return MaterialPageRoute(builder: (_) => const StoreMapsView());
 
       default:
         return MaterialPageRoute(builder: (_) => const LoginView());
