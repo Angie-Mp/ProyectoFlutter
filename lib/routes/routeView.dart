@@ -6,8 +6,8 @@ class MyRoutes {
   static const String routeSPLASHLOGIN = '/splash';
   static const String routeCREATEACCOUNT = '/createAccount';
   static const String routeHOME = '/home';
-  static const String routeCART = '/cart';
   static const String routeSTORES = '/stores';
+  static const String routePERFIL = '/perfil';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -22,10 +22,10 @@ class MyRoutes {
 
       case ('/home'):
         return MaterialPageRoute(builder: (_) => const HomeView());
-      case ('/cart'):
-        return MaterialPageRoute(builder: (_) => const MyCartView());
       case ('/stores'):
         return MaterialPageRoute(builder: (_) => const StoreMapsView());
+      case ('/perfil'):
+        return MaterialPageRoute(builder: (_) => const PerfilView());
 
       default:
         return MaterialPageRoute(builder: (_) => const LoginView());

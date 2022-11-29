@@ -7,8 +7,7 @@ class DarkMood extends ChangeNotifier {
       : currentTheme = isDarkMode
             ? ThemeData(
                 useMaterial3: true, colorScheme: const ColorScheme.dark())
-            : ThemeData(
-                useMaterial3: true, colorScheme: const ColorScheme.light());
+            : ThemeData(useMaterial3: true, colorScheme: ColorScheme.light());
   setClaro() {
     currentTheme =
         ThemeData(useMaterial3: true, colorScheme: const ColorScheme.light());

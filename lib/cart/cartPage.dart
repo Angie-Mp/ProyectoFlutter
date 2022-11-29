@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/cart/products.dart';
 import 'package:flutter_app/utils/font_styles.dart';
@@ -199,7 +200,27 @@ class _CartPageState extends State<CartPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (_) => AlertDialog(
+              title: const Text('Compra Exitosa'),
+              content: const Text("Gracias por ser parte del cambio"),
+              actions: <Widget>[
+                MaterialButton(
+                    child: const Text("Aceptar"),
+                    textColor: Color(0xFFFF6C44),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeView()),
+                      );
+                    }),
+              ],
+            ),
+          );
+        },
         label: Container(
             width: 280,
             height: 60,
@@ -303,6 +324,77 @@ class CartCoupon extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+//Boton redondeado
+class RoundedButton extends StatelessWidget {
+  final EdgeInsetsGeometry? padding;
+  final String label;
+  final Color color;
+  final Color labelColor;
+  final VoidCallback onPressed;
+  final bool isFullWidth;
+
+  const RoundedButton({
+    Key? key,
+    this.padding,
+    required this.label,
+    this.color = const Color(0XFF1E1F1E),
+    this.labelColor = Colors.white,
+    required this.onPressed,
+    this.isFullWidth = false,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: isFullWidth ? double.infinity : null,
+      child: CupertinoButton(
+        padding: padding,
+        borderRadius: const BorderRadius.all(
+          Radius.circular(12),
+        ),
+        color: //const Color(0XFF1E1F1E),
+            color,
+        onPressed: onPressed,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            // 'Order',
+            label,
+            maxLines: 1,
+            style: FontStyles.regular.copyWith(
+              fontSize: isFullWidth ? 16 : 14,
+              color: labelColor,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ProductCounterItem extends StatelessWidget {
+  final IconData icon;
+  final VoidCallback onPressed;
+  const ProductCounterItem({
+    Key? key,
+    required this.icon,
+    required this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      splashRadius: 13,
+      padding: const EdgeInsets.all(4),
+      onPressed: onPressed,
+      icon: Icon(
+        //Icons.remove,
+        icon,
       ),
     );
   }
